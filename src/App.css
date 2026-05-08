@@ -1,0 +1,72 @@
+@keyframes hero-chart-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes hero-chart-bar-in {
+  from {
+    opacity: 0;
+    transform: scaleY(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.hero-chart-path {
+  stroke-dasharray: 1180;
+  stroke-dashoffset: 1180;
+  animation: hero-chart-draw 2.35s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+.hero-chart-line-bloom {
+  stroke-dasharray: 1180;
+  stroke-dashoffset: 1180;
+  animation: hero-chart-draw 2.35s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  animation-delay: 40ms;
+}
+
+.hero-chart-bar {
+  opacity: 0;
+  transform-origin: center bottom;
+  transform-box: fill-box;
+  animation: hero-chart-bar-in 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes stat-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chart-stat-card {
+  animation: stat-fade-up 0.65s ease-out forwards;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-chart-path,
+  .hero-chart-line-bloom {
+    stroke-dashoffset: 0 !important;
+    animation: none;
+  }
+
+  .hero-chart-bar {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .chart-stat-card {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
