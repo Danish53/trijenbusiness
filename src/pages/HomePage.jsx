@@ -266,8 +266,8 @@ const OfficialPartnersSwiper = () => {
               key={idx} 
               className="flex-shrink-0 flex items-center justify-center gap-3 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-5 min-w-[180px] transition-all duration-300 hover:border-brand-accent/60 hover:bg-white/15 hover:scale-105"
             >
-            <div className='d-flex gap-2'>
-            <img className="text-3xl w-[50px]" src={p.logo} />
+            <div className='flex gap-2 items-center justify-center flex-col'>
+            <img className="text-3xl w-[50px] object-contain" src={p.logo} />
               <span className="font-semibold text-white/90 text-base whitespace-nowrap">{p.name}</span>
             </div>
             </div>
@@ -323,10 +323,10 @@ export default function HomePage() {
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 -z-0"
-          style={{
-            background:
-              'radial-gradient(ellipse at 96% 52%, rgba(252,91,1,0.30) 0%, rgba(252,91,1,0.16) 24%, rgba(120,52,8,0.08) 42%, rgba(15,10,8,0) 68%), linear-gradient(100deg, #040913 0%, #070b13 42%, #090a10 66%, #0a0908 100%)',
-          }}
+          // style={{
+          //   background:
+          //     'radial-gradient(ellipse at 96% 52%, rgba(252,91,1,0.30) 0%, rgba(252,91,1,0.16) 24%, rgba(120,52,8,0.08) 42%, rgba(15,10,8,0) 68%), linear-gradient(100deg, #040913 0%, #070b13 42%, #090a10 66%, #0a0908 100%)',
+          // }}
         />
         <div
           aria-hidden
@@ -338,11 +338,6 @@ export default function HomePage() {
           }}
         />
         <div className="text-left z-10">
-          <Reveal variant="up" durationMs={900}>
-            <p className="mb-5 inline-flex rounded-full border border-brand-accent/60 bg-black/30 backdrop-blur-sm px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.25em] text-brand-accent">
-              🚀 Digital Marketing Agency
-            </p>
-          </Reveal>
 
           <h1 className="mb-5 font-black uppercase leading-[0.95] tracking-tighter text-[clamp(2.2rem,6vw,3.8rem)]">
             <Reveal as="span" variant="up" delayMs={85} durationMs={980} className="block text-white">

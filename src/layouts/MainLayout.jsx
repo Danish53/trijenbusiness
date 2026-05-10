@@ -3,6 +3,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import Footer from '../components/Footer.jsx'
 import { NAV_ITEMS } from '../nav.js'
 import brandLogo from '../assets/logotras.png'
+import logoHead from "../assets/logoHead.png"
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation()
@@ -70,16 +71,16 @@ export default function MainLayout() {
         {/* Border Glow */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-accent/30 to-transparent" />
 
-        <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
+        <div className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-10">
           {/* Logo with enhanced styling */}
           <Link to="/" className="group flex items-center" onClick={() => setMenuOpen(false)}>
             <div className="relative">
               {/* Logo glow effect */}
               <div className="absolute -inset-2 rounded-xl bg-brand-accent/20 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <img
-                src={brandLogo}
+                src={logoHead}
                 alt="Trijen Business Solution"
-                className="relative h-14 w-auto rounded-lg object-contain drop-shadow-[0_8px_12px_rgba(0,0,0,0.4)] transition-transform duration-300 group-hover:scale-105 sm:h-16 md:h-18"
+                className="relative h-14 rounded-lg object-contain drop-shadow-[0_8px_12px_rgba(0,0,0,0.4)] transition-transform duration-300 group-hover:scale-105"
               />
             </div>
           </Link>
